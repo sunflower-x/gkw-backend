@@ -16,17 +16,17 @@ const server = http.createServer(app);
 
 
 
-// const DB = process.env.DATABASE.replace(
-//   "<PASSWORD>",
-//   process.env.DATABASE_PASSWORD
-// );
+const DB = process.env.DATABASE.replace(
+  "<PASSWORD>",
+  process.env.DATABASE_PASSWORD
+);
 
 // 连接数据库
-// mongoose
-//   .connect(DB, {})
-//   .then((con) => {
-//     console.log("DB Connection successful");
-//   });
+mongoose
+  .connect(DB, {})
+  .then((con) => {
+    console.log("DB Connection successful");
+  });
 
 const port = process.env.PORT || 8000;
 
